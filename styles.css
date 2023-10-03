@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+}
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Hanken Grotesk", Tahoma,sans-serif;
+}
+:root{
+    --left-tile-act-but: rgb(76, 17, 214);
+    --left-title: rgba(180, 178, 178, 0.658);
+    --circle-text: #7B77F2;
+    --left-score-desc: #c4c2f7;
+    
+}
+body{
+    background-color: rgba(230, 226, 241, 0.473);
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#outer-tile{
+    display: flex;
+    flex-direction: row;
+    /*border: 2px solid red;*/
+    background-color: rgb(255, 255, 255);
+    /*dar mismo color que a right-tile*/
+    height: 50vh;
+    width: 50%;
+    
+    border-radius: 5%;
+    box-shadow: 8px 5px 25px rgb(141, 185, 252);
+}
+.column-design{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+    height: 50vh;
+}
+
+#left-tile{
+    background-color: var(--left-tile-act-but);
+  
+    border-radius: 5%;
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 8%;
+
+}
+#left-title{
+    color: var(--left-title);
+    padding-top: 30px;
+}
+#circle{
+    background-color: rgb(67, 14, 192);
+    background: linear-gradient(180deg,rgba(28, 19, 104, 0.534)60%, rgba(67, 14, 192, 0.171));
+    text-align: center;
+    border-radius: 100%;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color:white;
+    font-size: 2.8rem;
+}
+#circle-score{
+    color: var(--circle-text);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+h4{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#score-desc{
+    font-size: 0.8rem;
+   color: var(--left-score-desc);
+    /*color:  #dbdaeb;*/
+    margin-top: -1rem;
+    width: 75%;
+    height: 35%;
+}
+
+#right-tile{
+    background-color: rgb(255, 255, 255);
+    
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    
+    
+}
+p{
+    color: white;
+}
+.mini-tiles{
+    width: 80%;
+    height: 12%;
+    border-radius: 15px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: -2rem;
+    
+    
+}
+
+.sum-tile{
+    display:flex;
+    width: 80%;
+    justify-content: flex-start;
+    margin-bottom: -2rem;
+}
+
+#summary1{
+    background-color: rgba(248, 63, 63, 0.192);
+    color: black;
+}
+#reaction{
+    color: rgba(255, 0, 0, 0.623);
+}
+#summary2{
+    background-color: rgba(255, 235, 57, 0.205);
+}
+#memory{
+    color: rgba(255, 166, 0, 0.568);
+}
+
+#summary3{
+    background-color: rgba(166, 238, 204, 0.219);
+}
+#verbal{
+    color: rgba(56, 177, 185, 0.959);
+}
+
+#summary4{
+    background-color: rgba(22, 10, 189, 0.144);
+}
+#visual{
+    color: #352fe6;
+}
+.sum-scores{
+    color: black;
+    font-size: 0.8rem;
+    
+}
+.sum-text{
+    font-size: 0.8rem;
+    text-align: left;
+    padding-right: 15%;
+}
+span{
+    color: grey;
+    font-size: 0.8rem;
+    
+}
+
+button{
+    width: 80%;
+    border-radius: 18px 18px;
+    background-color: rgb(61, 70, 121);
+    border-style: none;
+    height: 10%;
+    color: white;
+    font-size: 0.8rem;
+}
+
+button:hover{
+    background-color: var(--left-tile-act-but);
+}
+
+@media (max-width:660px){
+    #outer-tile{
+        flex-flow: wrap;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-content: center;
+        width: 80%;
+    }
+    
+    .column-design{
+        width: 100%;
+    }
+
+}
+
+@media (max-width:380px){
+    #outer-tile{
+        flex-flow: wrap;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-content: center;
+        width: 100%;
+    }
+    #left-tile{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+
+    }
+
+    .column-design{
+        width: 100%;
+    }
+}
